@@ -1,0 +1,9 @@
+runConfig:
+  vpcAccess:
+    egress: PRIVATE_RANGES_ONLY
+    networkInterfaces:
+    - network: default
+
+env:
+- variable: MEMCACHE_ADDR
+  value: 10.127.16.3:11211
