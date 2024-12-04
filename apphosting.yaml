@@ -1,8 +1,7 @@
 runConfig:
   vpcAccess:
+    connector: default
     egress: PRIVATE_RANGES_ONLY
-    networkInterfaces:
-    - network: default
 
 env:
 - variable: MEMCACHE_ADDR
