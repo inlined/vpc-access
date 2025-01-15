@@ -1,6 +1,6 @@
 runConfig:
   vpcAccess:
-    egress: PRIVATE_RANGES_ONLY
+    egress: ALL_TRAFFIC
     networkInterfaces:
     - network: default
 
