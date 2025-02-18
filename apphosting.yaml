@@ -1,8 +1,8 @@
 runConfig:
   vpcAccess:
-    egress: PRIVATE_RANGES_ONLY
+    egress: ALL_TRAFFIC
     networkInterfaces:
-    #- network: projects/inlined-junkdrawer/global/networks/default
+     - network: projects/inlined-junkdrawer/global/networks/default
      - subnetwork: projects/inlined-junkdrawer/regions/us-central1/subnetworks/default
 
 env:
