@@ -1,7 +1,7 @@
 runConfig:
   vpcAccess:
     egress: ALL_TRAFFIC
-    connector: projects/inlined-junkdrawer/locations/us-central1/connectors/default
+    connector: default
 
 env:
 - variable: MEMCACHE_ADDR
