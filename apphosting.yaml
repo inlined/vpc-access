@@ -1,5 +1,6 @@
 runConfig:
   vpcAccess:
+    egress: ALL_TRAFFIC
     connector: projects/inlined-junkdrawer/locations/us-central1/connectors/default
 
 env:
