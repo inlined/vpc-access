@@ -2,7 +2,7 @@ runConfig:
   vpcAccess:
     egress: ALL_TRAFFIC
     networkInterfaces:
-    - network: default
+    - network: projects/inlined-junkdrawer/networks/default/subnetwork/default
 
 env:
 - variable: MEMCACHE_ADDR
