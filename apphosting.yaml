@@ -2,8 +2,8 @@ runConfig:
   vpcAccess:
     egress: PRIVATE_RANGES_ONLY
     networkInterfaces:
-     - network: projects/inlined-junkdrawer/global/networks/default
-       subnetwork: projects/inlined-junkdrawer/regions/us-central1/subnetworks/default
+     - network: default
+       subnetwork: default
 
 env:
 - variable: MEMCACHE_ADDR
