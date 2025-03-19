@@ -1,7 +1,7 @@
 runConfig:
   vpcAccess:
     egress: PRIVATE_RANGES_ONLY
-    connector: default
+    connector: projects/inlined-junkdrawer/locations/us-central1/connectors/default
 
 env:
 - variable: MEMCACHE_ADDR
