@@ -1,6 +1,6 @@
 runConfig:
   vpcAccess:
-    egress: ALL_TRAFFIC
+    egress: PRIVATE_RANGES_ONLY
     connector: default
 
 env:
