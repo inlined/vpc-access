@@ -3,7 +3,7 @@ runConfig:
     egress: PRIVATE_RANGES_ONLY
     networkInterfaces:
      - network: default
-       subnetwork: default
+     # subnetwork: default
 
 env:
 - variable: MEMCACHE_ADDR
