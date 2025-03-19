@@ -3,7 +3,7 @@ runConfig:
     egress: ALL_TRAFFIC
     networkInterfaces:
      - network: default
-     # subnetwork: default
+       subnetwork: default
 
 env:
 - variable: MEMCACHE_ADDR
