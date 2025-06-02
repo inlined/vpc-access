@@ -14,9 +14,13 @@ const app = express();
 app.use(bodyParser.text());
 app.use(bodyParser.json());
 
-app.purge("/methodTest", (req, res) => {
-  console.log("Method Test:", req.method);
-  res.send(`Method: ${req.method}`);
+app.get("/cacheable", (req, res) => {
+  res.set('Cache-Control', 'public, max-age=3600, s-maxage=3600');
+  res.headejson({ status: "OK" });
+});
+
+app.get("/uncacheable", (req, res) => {
+  res.headejson({ status: "OK" });
 });
 
 app.get("/", async (req, res) => {
