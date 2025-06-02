@@ -1,16 +1,7 @@
 runConfig:
-  vpcAccess:
-    egress: ALL_TRAFFIC
-    networkInterfaces:
-      - network: default
-        subnetwork: default
-
-env:
-  - variable: MEMCACHE_ADDR
-    value: 10.127.16.3:11211
-  - variable: TESTKEY
-    secret: testkey
-  - variable: API_KEY
-    secret: api-key
-  - variable: TEST_SECRET2
-    secret: test-secret2
+#  vpcAccess:
+#    egress: ALL_TRAFFIC
+#    networkInterfaces:
+#      - network: default
+#        subnetwork: default
+#
