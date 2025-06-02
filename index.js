@@ -5,6 +5,7 @@ const Memcached = require('memcached');
 if (!process.env.MEMCACHE_ADDR) {
   console.error("MEMCACHE_ADDR must be set");
   process.exit(1);
+
 }
 
 const cache = new Memcached(process.env.MEMCACHE_ADDR);
@@ -12,6 +13,15 @@ const cache = new Memcached(process.env.MEMCACHE_ADDR);
 const app = express();
 app.use(bodyParser.text());
 app.use(bodyParser.json());
+
+app.get("/cacheable", (req, res) => {
+  res.set('Cache-Control', 'public, max-age=3600, s-maxage=3600');
+  res.json({ status: "OK" });
+});
+
+app.get("/uncacheable", (req, res) => {
+  res.json({ status: "OK" });
+});
 
 app.get("/", async (req, res) => {
   cache.get("value", (err, data) => {
