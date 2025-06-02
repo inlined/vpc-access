@@ -1,14 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Memcached = require('memcached');
-
-if (!process.env.MEMCACHE_ADDR) {
-  console.error("MEMCACHE_ADDR must be set");
-  process.exit(1);
-
-}
-
-const cache = new Memcached(process.env.MEMCACHE_ADDR);
 
 const app = express();
 app.use(bodyParser.text());
