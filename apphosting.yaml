@@ -1,7 +1,0 @@
-runConfig:
-#  vpcAccess:
-#    egress: ALL_TRAFFIC
-#    networkInterfaces:
-#      - network: default
-#        subnetwork: default
-#

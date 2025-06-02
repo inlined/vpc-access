@@ -1,3 +1,0 @@
-env:
-- variable: MEMCACHE_ADDR
-  value: 127.0.0.1:11211
