@@ -24,6 +24,8 @@ app.get("/uncacheable", (req, res) => {
 });
 
 app.get("/", async (req, res) => {
+  res.json({"status": "OK"});
+  /*
   cache.get("value", (err, data) => {
     if (err) {
       console.error("Failed to fetch cache value:", err);
@@ -33,6 +35,7 @@ app.get("/", async (req, res) => {
     console.log("GOT", JSON.stringify(data, null, 2));
     res.send(data);
   });
+  */
 });
 
 app.post("/", (req, res) => {
