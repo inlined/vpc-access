@@ -1,9 +1,6 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const app = express();
-app.use(bodyParser.text());
-app.use(bodyParser.json());
 
 app.get("/cacheable", (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, s-maxage=3600');
@@ -14,30 +11,8 @@ app.get("/uncacheable", (req, res) => {
   res.json({ status: "OK" });
 });
 
-app.get("/", async (req, res) => {
+app.all("/", async (req, res) => {
   res.json({"status": "OK"});
-  /*
-  cache.get("value", (err, data) => {
-    if (err) {
-      console.error("Failed to fetch cache value:", err);
-      res.status(500).send(err);
-      return;
-    }
-    console.log("GOT", JSON.stringify(data, null, 2));
-    res.send(data);
-  });
-  */
-});
-
-app.post("/", (req, res) => {
-  console.log("Setting value to", req.body);
-  cache.set("value", req.body, 3600, (err) => {
-    if (err) {
-      res.status(500).send(err);
-    } else {
-      res.send("OK");
-    }
-  });
 });
 
 const port = process.env.PORT || 8080;
