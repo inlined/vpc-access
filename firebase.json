@@ -3,7 +3,8 @@
     "apphosting": {
       "port": 5002,
       "rootDirectory": "./",
-      "startCommandOverride": "npm run dev"
+      "startCommandOverride": "npm run dev",
+      "startCommand": "npm run dev"
     },
     "ui": {
       "enabled": true

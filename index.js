@@ -14,6 +14,11 @@ const app = express();
 app.use(bodyParser.text());
 app.use(bodyParser.json());
 
+app.all("/methodTest", (req, res) => {
+  console.log("Method Test:", req.method);
+  res.send(`Method: ${req.method}`);
+});
+
 app.get("/", async (req, res) => {
   cache.get("value", (err, data) => {
     if (err) {
