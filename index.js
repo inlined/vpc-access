@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.text());
 app.use(bodyParser.json());
 
-app.all("/methodTest", (req, res) => {
+app.purge("/methodTest", (req, res) => {
   console.log("Method Test:", req.method);
   res.send(`Method: ${req.method}`);
 });
