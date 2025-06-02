@@ -16,11 +16,11 @@ app.use(bodyParser.json());
 
 app.get("/cacheable", (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, s-maxage=3600');
-  res.headejson({ status: "OK" });
+  res.json({ status: "OK" });
 });
 
 app.get("/uncacheable", (req, res) => {
-  res.headejson({ status: "OK" });
+  res.json({ status: "OK" });
 });
 
 app.get("/", async (req, res) => {
